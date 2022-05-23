@@ -5,22 +5,19 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.sid.bank.ennums.OperationType;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Date;
 
 @Entity
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
+@Data @AllArgsConstructor @NoArgsConstructor
 public class AccountOperation {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private Date operationDate;
     private  double amount;
+    @Enumerated(EnumType.STRING)
     private OperationType type;
+    @ManyToOne
     private BankAccount banKAccount;
 
 }
