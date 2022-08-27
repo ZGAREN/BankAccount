@@ -1,4 +1,4 @@
-package org.sid.bank.ennums;
+package org.sid.bank.enums;
 
 public enum OperationType {
     CREADIT, DEBIT

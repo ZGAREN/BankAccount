@@ -3,14 +3,14 @@ package org.sid.bank.entities;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.sid.bank.ennums.OperationType;
+import org.sid.bank.enums.OperationType;
 
 import javax.persistence.*;
 import java.util.Date;
 
 @Entity
 @Data @AllArgsConstructor @NoArgsConstructor
-public class AccountOperation {
+public class   AccountOperation {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private Date operationDate;
@@ -19,5 +19,7 @@ public class AccountOperation {
     private OperationType type;
     @ManyToOne
     private BankAccount banKAccount;
+    private String description;
+
 
 }

@@ -3,7 +3,7 @@ package org.sid.bank.entities;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.sid.bank.ennums.AccountStatus;
+import org.sid.bank.enums.AccountStatus;
 
 import javax.persistence.*;
 import java.util.Date;
